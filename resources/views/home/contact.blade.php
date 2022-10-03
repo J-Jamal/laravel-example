@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ $name }}</title>
-    {{-- link untuk mengakses css yang ada di menu public  --}}
-    <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+    <title>Document</title>
 </head>
 
 <body>
-    <h1>aku akan belajar {{ $name }}</h1>
+    {{-- script untuk mengakses js di menu public --}}
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>

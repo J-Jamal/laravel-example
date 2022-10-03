@@ -1,0 +1,7 @@
+/* CSS external untuk diakses di menu view */
+body {
+    background-color: black;
+    color: whitesmoke;
+    font-family: sans-serif;
+    padding: 10px;
+}
