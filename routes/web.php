@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Routing
+Route::get('home', function () {
+    $name = "Laravel 8";
+    return view('home.home', [
+        'name' => $name,
+    ]);
+});
