@@ -31,3 +31,12 @@ Route::get('home', function () {
 
 // Routing untuk menu view contact
 Route::view('contact', 'home.contact');
+
+// Routing untuk menu view post
+Route::view('post', 'home.post');
+
+// Routing untuk halaman about
+Route::view('about', 'home.about');
+
+// Routing untuk halaman profile
+Route::view('profile', 'home.profile');

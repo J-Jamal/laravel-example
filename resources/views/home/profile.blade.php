@@ -1,12 +1,12 @@
 {{-- membuat ketergantungan dengan menu app blade --}}
 {{-- memanggil paramater title dengan membuat array dan arrow function dan memasukkan value --}}
-@extends('layouts.app', ['title' => 'Home'])
+@extends('layouts.app', ['title' => 'Profile'])
 
 
 {{-- memanggil yield yang ada di app --}}
 @section('content')
     {{-- di dalam section dapat memasukkan kode seperti html, css dan js --}}
-    <h2>Ini adalah halaman home</h2>
+    <h2>Ini adalah halaman profile</h2>
     <p><strong style="color: red">Lorem ipsum dolor</strong> sit amet consectetur adipisicing elit. Nostrum dicta voluptatum
         aut, quasi
         veritatis consequuntur,
