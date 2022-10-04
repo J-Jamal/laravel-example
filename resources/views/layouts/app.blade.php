@@ -15,8 +15,13 @@
 <body>
     {{-- <h1>aku akan belajar {{ $name }}</h1> --}}
     {{-- <h2>ini halaman home</h2> --}}
+    {{-- pemanggilan navbar menggunakan component --}}
+    <x-navbar>
+
+    </x-navbar>
+    {{ $slot }}
     {{-- hasil include atau pemanggilan dari file layouts navbar --}}
-    @include('layouts.navbar')
+    {{-- @include('layouts.navbar') --}}
     {{-- membuat sejenis parameter untuk di akses di menu yang memanggilnya --}}
     @yield('content')
 </body>
