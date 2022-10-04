@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,3 +41,8 @@ Route::view('about', 'home.about');
 
 // Routing untuk halaman profile
 Route::view('profile', 'home.profile');
+
+// routing untuk melakukan request di halaman profile
+Route::get('profile/{username}', function ($username) {
+    return view('home.profile', ['name' => $username]);
+});
