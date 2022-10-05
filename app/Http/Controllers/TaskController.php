@@ -24,6 +24,7 @@ class TaskController extends Controller
         Task::create([
             // list berasala dari view create dengan name list
             'list' => $request->list,
+            'mark' => false,
         ]);
         return redirect('tasks');
     }
