@@ -27,7 +27,8 @@ class Navbar extends Component
             'Home' => '/home',
             'About' => '/about',
             'Contact' => '/contact',
-            'Profile' => '/profile'
+            'Profile' => '/profile',
+            'Tasks' => '/tasks',
         ];
         // compact bisa dilakukan jika nama variabel dengan parameter sama
         // view juga bisa dilakukan pada layout tidak hanya dicomponent, yaitu dengan mengubah component.navbar
