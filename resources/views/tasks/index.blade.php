@@ -13,7 +13,14 @@
         {{-- membuat index supaya bisa menampilkan index atau penomoran dalam list --}}
         @foreach ($tasks as $index => $task)
             {{-- memmanggil controller dan membuat singular dan plural dan juga memanggil nama databse yang ingin ditampilkan dengan variabel --}}
-            <li>{{ $index + 1 }} - {{ $task->list }}</li>
+            <li style="margin-bottom: 15px">{{ $index + 1 }} - {{ $task->list }} - <a style="color: green"
+                    href="/tasks/{{ $task->id }}/edit">edit</a>
+                <form action="/tasks/{{ $task->id }}" method="POST" style="display:inline">
+                    @csrf
+                    @method('delete')
+                    <button type="submit">delete</button>
+                </form>
+            </li>
         @endforeach
     </ul>
 </x-app-layout>
