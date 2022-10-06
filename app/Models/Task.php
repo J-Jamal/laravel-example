@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+    protected $fillable = ['list'];
 }
 
 // singular, biasanya di model

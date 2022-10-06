@@ -21,11 +21,7 @@ class TaskController extends Controller
     }
     public function store(Request $request)
     {
-        Task::create([
-            // list berasala dari view create dengan name list
-            'list' => $request->list,
-            'mark' => false,
-        ]);
+        Task::create($request->all());
         return redirect('tasks');
     }
     public function edit($id)
