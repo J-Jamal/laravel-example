@@ -7,7 +7,7 @@
                     <div class="card-body">
                         <h1>Tasks</h1>
                         {{-- method post berfungsi untuk menampilkan data yang sudah dibuat --}}
-                        <form action="/tasks" method="POST" class="d-flex">
+                        <form action="{{ route('tasks.store') }}" method="POST" class="d-flex">
                             {{-- wajib untuk keamanan jika menggunakan input atau form --}}
                             @csrf
                             {{-- name list nantinya akan dipanggil di controller yang infin mengaksesnya --}}
@@ -29,8 +29,8 @@
                 <li class="list-group-item d-flex align-items-center justify-content-between">{{ $index + 1 }} -
                     {{ $task->list }}
                     <div class="d-flex">
-                        <a class="btn btn-primary me-2" href="/tasks/{{ $task->id }}/edit">edit</a>
-                        <form action="/tasks/{{ $task->id }}" method="POST" style="display:inline">
+                        <a class="btn btn-primary me-2" href="{{ route('tasks.edit', $task->id) }}">edit</a>
+                        <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" style="display:inline">
                             @csrf
                             @method('delete')
                             <button class="btn btn-danger" type="submit">delete</button>

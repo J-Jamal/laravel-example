@@ -51,14 +51,15 @@ use Illuminate\Support\Facades\Route;
 //     return view('home.profile', ['name' => $username]);
 // });
 // routing untuk menghubungkan dengan controller
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
 Route::get('profile/{identifier}', [ProfileInformationController::class, '__invoke']);
 Route::get('contact', [ContactController::class, 'create']);
 Route::post('contact', [ContactController::class, 'store']);
 
-Route::get('tasks', [TaskController::class, 'index']);
-Route::get('tasks/create', [TaskController::class, 'create']);
-Route::post('tasks', [TaskController::class, 'store']);
-Route::get('tasks/{id}/edit', [TaskController::class, 'edit']);
-Route::put('tasks/{id}', [TaskController::class, 'update']);
-Route::delete('tasks/{id}', [TaskController::class, 'destroy']);
+// Route::get('tasks', [TaskController::class, 'index']);
+// Route::get('tasks/create', [TaskController::class, 'create']);
+// Route::post('tasks', [TaskController::class, 'store']);
+// Route::get('tasks/{id}/edit', [TaskController::class, 'edit']);
+// Route::put('tasks/{id}', [TaskController::class, 'update']);
+// Route::delete('tasks/{id}', [TaskController::class, 'destroy']);
+Route::resource('tasks', TaskController::class);
