@@ -9,7 +9,7 @@
     {{-- meemberikan parameter untuk mengakses ke menu lain --}}
     <title>{{ $title }} | Parsinta</title>
     {{-- link untuk mengakses css yang ada di menu public  --}}
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/app.css">
     {{-- membuat slot untuk kostomisasi css di menu navbar --}}
     {{ $styles }}
 </head>
@@ -26,7 +26,7 @@
     {{-- @include('layouts.navbar') --}}
     {{-- membuat sejenis parameter untuk di akses di menu yang memanggilnya --}}
     @yield('content')
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
