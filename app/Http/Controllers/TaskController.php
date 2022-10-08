@@ -24,12 +24,13 @@ class TaskController extends Controller
         Task::create($request->all());
         return redirect('tasks');
     }
-    public function edit($id)
+    public function edit(Task $task)
+    // model binding, jika ada data bernama task maka tambah parameter $task
     {
         // where digunakan untuk mencari field selain id
         // $task = Task::where('id', $id)->first();
         // find digunakan untuk mencari field id
-        $task = Task::find($id);
+        // $task = Task::find($id);
         return view('tasks.edit', ['task' => $task]);
     }
     public function update(Request $request, $id)
