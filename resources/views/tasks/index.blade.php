@@ -2,21 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Create New Task</div>
-                    <div class="card-body">
-                        <h1>Tasks</h1>
-                        {{-- method post berfungsi untuk menampilkan data yang sudah dibuat --}}
-                        <form action="{{ route('tasks.store') }}" method="POST" class="d-flex">
-                            {{-- wajib untuk keamanan jika menggunakan input atau form --}}
-                            @csrf
-                            {{-- name list nantinya akan dipanggil di controller yang infin mengaksesnya --}}
-                            <input type="text" name="list" id="" class="form-control me-2"
-                                placeholder="The name of the task">
-                            <button class="btn btn-primary" type="submit">Send</button>
-                        </form>
-                    </div>
-                </div>
+                @include('tasks._create')
             </div>
         </div>
 
