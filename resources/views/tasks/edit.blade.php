@@ -9,14 +9,7 @@
                     @method('put')
                     {{-- wajib untuk keamanan jika menggunakan input atau form --}}
                     @csrf
-                    <div class="mb-2">
-                        <input type="text" name="list" class="form-control @error('list') is-invalid @enderror"
-                            id="" placeholder="The name of the task" value="{{ $task->list }}">
-                        @error('list')
-                            <span class="invalid-feedback">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <button class="btn btn-primary" type="submit">update</button>
+                    @include('tasks._form')
                     {{-- name list nantinya akan dipanggil di controller yang infin mengaksesnya --}}
                 </form>
             </div>

@@ -13,12 +13,19 @@ class TaskController extends Controller
     public function index()
     {
         // variabel task untuk menampung pemanggilan database
-        $tasks = Task::orderBy('id', 'desc')->get();
+        // $tasks = Task::orderBy('id', 'desc')->get();
         // memamnggil halaman index di view
-        return view('tasks.index', compact('tasks'));
+        return view('tasks.index', [
+            'task' => new Task,
+            'submit' => 'Create',
+            'tasks' => Task::orderBy('id', 'desc')->get(),
+        ]);
     }
-    public function create()
+    public function create(Request $request)
     {
+        // return view('tasks.create');
+        // Task::create($request->all());
+        // return back();
         return view('tasks.create');
     }
     public function store(TaskRequest $request)
@@ -33,7 +40,10 @@ class TaskController extends Controller
         // $task = Task::where('id', $id)->first();
         // find digunakan untuk mencari field id
         // $task = Task::find($id);
-        return view('tasks.edit', ['task' => $task]);
+        return view('tasks.edit', [
+            'task' => $task,
+            'submit' => 'Update',
+        ]);
     }
     public function update(TaskRequest $request, $id)
     {
